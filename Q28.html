@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>R4</title>
+        <style>
+            #ok{
+                background-color: beige;
+                text-transform: capitalize;
+                font-family: serif;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="ok" onclick="hide()"> </div>
+
+        <script>
+            let fname = prompt("Enter your first name");
+            let lname = prompt("Enter your last name");
+            name = fname+" "+lname;
+
+            let hr;
+            let block = document.getElementById("ok");
+            function clock()
+            {
+                d = new timer();
+                hr = d.getHours();
+            }
+
+            if(1<=hr<12){
+                block.innerHTML="Good morning   "+name;
+            }
+            else if(12<=hr<17){
+                block.innerHTML="Good afternoon   "+name;
+            }
+            else{
+                block.innerHTML="Good evening  "+name;
+            }
+ 
+            function hide(){
+                block.style.display = "none";
+            }
+        </script>
+
+
+    </body>
+</html>

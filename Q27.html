@@ -1,0 +1,59 @@
+<html>
+    <head> 
+       <style>
+        body{
+            background-color: fuchsia;
+        }
+        #clock{
+            
+            position: absolute;
+            left: 650px;
+            top:200px;
+            font-size: xx-large;
+            background-color: aliceblue;
+            color: black;
+
+        }
+       </style>
+    </head>
+    <body>
+
+        <h1>TIME</h1>
+        <div id="clock">
+        </div>
+
+        <script>
+
+            function clock(){
+                d = new Date();
+                hr = d.getHours();
+                min = d.getMinutes();
+                sec = d.getSeconds();
+
+                if(hr < 10  && sec <10){
+                    cTime = "0"+hr+" : "+min+" : 0"+sec;
+                }
+                else if(hr < 10){
+                    cTime = "0"+hr+" : "+min+" : "+sec;
+                }
+                else if(min<10){
+                    if(sec < 10){
+                    cTime = hr+" : 0"+min+" : 0"+sec;
+                    }
+                    else{
+                    cTime = hr+" : 0"+min+" : "+sec;
+                    }
+                }
+                else if(sec < 10){
+                    cTime = hr+" : "+min+" : 0"+sec;
+                }
+                else{
+                cTime = hr+" : "+min+" : "+sec;
+                }
+                document.getElementById('clock').innerHTML = cTime;
+                
+            }
+            setInterval(clock ,1000);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,375 @@
+<html>
+    <head>
+        <title>Resume</title>
+        
+        <style>
+                #fi {
+                height: 100%;
+                width: 100%;
+                background-color: deeppink;
+                border: 0px inset royalblue;
+                position: relative;
+                }
+                #Sec {
+                height: 100%;
+                width: 100%;
+                background-color: darkcyan;
+                border: 2px inset black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                }
+                #Thr {
+                height: 100%;
+                width: 100%;
+                background-color: brown;
+                border: 2px inset black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                }
+                #Fhr {
+                height: 100%;
+                width: 100%;
+                background-color: khaki;
+                border: 2px inset black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                }
+                #Fiv {
+                height: 100%;
+                width: 100%;
+                background-color: lime;
+                border: 2px inset black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                }
+
+                .container{
+                    border:2px inset red;
+                    box-shadow:20px 10px 10px white;
+                    border-bottom-right-radius: 25%;
+                    border-top-left-radius: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-width: 2px;
+                    background-color: white;
+                    position: relative;
+                    top:80px;
+                    height: 70%;
+                    width: 70%;
+                    margin-left: 200px;
+                }
+                hr{
+                    width: 80%;
+                    height: 6px;
+                    background-color: black;
+                }
+                pre{
+                    font-family: sans-serif;
+                    font-size:x-large;
+                    line-height: 40px;
+                    word-spacing: 10px;
+                }
+                .container>div{
+                    position: relative;
+                }
+                
+                .container>div>div{
+                    height: 100px;
+                    width: 100px;
+                    border:2px inset white;
+                    border-radius: 50%;
+                    background-color: black;
+                    color: aliceblue;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    top:45px;
+                    left:290px;
+                    transition: all;
+                }
+                .container>div>div:hover{
+                    transform: scale(3);
+                }
+                img{
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            nav{
+                width: 100%;
+                height: 80px;
+                background-color: aliceblue;
+                top: -20px;
+                position: fixed;
+            }
+            nav>ul{
+                list-style: none;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                height: 100%;
+            }
+          
+            nav>ul>a{
+                text-decoration: none;
+                display: flex;
+                justify-content: space-around;
+                font-family:fantasy;
+                text-transform:uppercase;
+                color:black;
+            }
+            nav>ul>a:hover{
+                font-size: xx-large;
+                background-color: deeppink;
+                color: aliceblue;
+            }
+
+            .cont2{
+                    border:4px inset red;
+                    box-shadow:20px 10px 10px white;
+                    border-width: 2px;
+                    background-color: white;
+                    height: 90%;
+                    width: 90%;
+                    margin: 0;
+                }
+            
+
+                .cont2>p{
+                    width:35%;
+                    height: 50%;
+                    font-size:19px;
+                    font-family: serif;
+                    color:black(234,45,67);
+                    text-align:justify;
+                    float:left;
+                    margin-right: 30px;
+                    margin-left: 30px;
+                    padding: 20px;
+                    word-spacing: 20px;
+                    line-height:1.3;
+		        }
+                
+            .cont2>#Bi{
+                    height: 100px;
+                    width: 100px;
+                    border:2px inset white;
+                    border-radius: 50%;
+                    background-color: black;
+                    color: aliceblue;
+                    display: flex;
+                    justify-content: center;
+                    align-items:center;
+                    position: relative;
+                    left: 30px;
+                    top:20px;
+                    transition: all;
+                }
+                .cont2>#Bi:hover{
+                    transform: scale(2);
+                    background-color: grey;
+                    color: black;
+                }
+
+                .cont3{
+                    border:4px inset red;
+                    box-shadow:20px 10px 10px white;
+                    border-width: 2px;
+                    background-color: white;
+                    height: 80%;
+                    width: 80%;
+                }
+                .cont3>#Bi{
+                    height: 120px;
+                    width: 120px;
+                    border:2px inset white;
+                    border-radius: 50%;
+                    background-color: black;
+                    color: aliceblue;
+                    display: flex;
+                    justify-content: center;
+                    align-items:center;
+                    position: relative;
+                    left: 30px;
+                    top:10px;
+                    transition: all;
+                }
+                .cont3>#Bi:hover{
+                    transform: scale(2);
+                    background-color: grey;
+                    color: black;
+                }
+                .cont3>p{
+                    width:35%;
+                    height: 50%;
+                    padding: 20px;
+                    font-size:16px;
+                    font-family: serif;
+                    color:black(234,45,67);
+                    text-align:justify;
+                    float:left;
+                    word-spacing:8px;
+                    line-height: 1.5;
+                    margin-right: 50px;
+                    margin-left: 40px;
+		        }
+
+                .cont4{
+                    border:2px inset red;
+                    box-shadow:20px 10px 10px white;
+                    border-bottom-right-radius: 25%;
+                    border-top-left-radius: 25%;
+                    border-width: 2px;
+                    background-color: white;
+                    height: 80%;
+                    width: 80%;
+                    margin-left: 40px;
+                    margin-top: 40px ;
+                }
+                .cont4>#Prj{
+                    height: 120px;
+                    width: 120px;
+                    border:2px inset white;
+                    border-radius: 50%;
+                    background-color: black;
+                    color: aliceblue;
+                    display: flex;
+                    justify-content: center;
+                    align-items:center;
+                    position: relative;
+                    left: 80;
+                    top:10px;
+                    margin: 20px;
+                    transition: all;
+                }
+                .cont4>#Prj:hover{
+                    transform: scale(2);
+                    background-color: grey;
+                    color: black;
+                }
+
+                .cont4>p{
+                    width:100%;
+                    height: 10%;
+                    padding: 20px;
+                    font-size:26px;
+                    font-family:monospace;
+                    color:black(234,45,67);
+                    text-align:justify;
+                    word-spacing:8px;
+                    line-height: 1;
+                    margin-right: 50px;
+                    margin-left: 40px;
+		        }
+        </style>
+    </head>
+
+    <body>
+        <div id="Fi">
+            <nav>
+                <ul>
+                    <a href="#2"><li id="B"><span>BIO</span></li></a>
+                    <a href="#3"><li><span>Acadamics</span></li></a>
+                    <a href="#4"><li><span>Project</span></li></a>
+                    <a href="#5"><li><span>Skill</span></li></a>
+                    <a href="#6"><li><span>Contact Information</span></li></a>
+                </ul>
+            </nav>
+            <div class="container">
+            <div>
+                        <div><img src="IMAGES/img9.jpg"> </div>
+            <pre>  <hr>
+I'm <span style="font-weight: 900;">Nikita Gusain </span>, a B-tech IT student.
+I'm from Uttarakhand, currently in Banasthali for my graduation.
+<span style="color: crimson;">Say Hello,</span> and Keep Scrolling.
+   </pre>
+             </div>
+            </div>
+        </div>
+
+        <a name='2'><div id="Sec">
+            <div class="cont2">
+                <div id="Bi"><h2>BIO</h2></div>   
+                <p>  
+I am a dedicated, organized and methodical individual. I have good interpersonal skills, am an excellent team worker and am keen and very willing to learn and develop new skills.<br><br> I am reliable and dependable and often seek new responsibilities within a wide range of employment areas. I have an active and dynamic approach to work and getting things done. I am determined and decisive. I identify and develop opportunities.</p>
+<p>I am a flexible and experienced insurance administrator with excellent time management skills. I am a good communicator with proven inter personal skills and am used to working in a team whilst also being capable of using own initiative.<br><br> I am skilled In dealing with problems in a resourceful manner and negotiating to achieve beneficial agreement. I am always enthusiastic to learn and undertake new challenges.</p>
+            </div>
+        </div></a>
+    
+        <a name='3'>
+            <div id="Thr">
+            <div class="cont3">
+                <div id="Bi"><h2>Acadamics</h2></div>   
+                <p>
+                    <span style="font-weight: bolder; font-size: x-large; text-decoration: underline;">Bachelor of Technology<br><br></span>
+                    <span style="font-weight: bolder;">Banasthali Vidyapith<br><br></span>		
+ 07/2020-Present <span style="font-style: italic; font-weight: 900; margin-left: 100px;">CGPA 9.07</span><br><br>
+ Courses <span style="font-weight: 900; margin-left: 100px;">Information-Technology<br><br></span>
+</p>
+<p>
+    <span style="font-weight: bolder; font-size: x-large; text-decoration: underline;">Schooling<br><br></span>
+    <span style=" font-weight: 900;" >Board Of School Education Uttarakhand<br></span>
+    <span style=" font-weight: 900;">SPVM InterCollege Gopeshwar, Uttarakhand<br><br></span>
+    Intermediate Examination 2019-2020
+   <span style="font-style: italic; font-weight: 900; margin-left: 140px;">CGPA 7.9 <br><br></span>
+High School Examination  2017-2018<br> 
+ <span style="font-style: italic; font-weight: 900; margin-left: 140px;">CGPA 9.2<br></span>    
+</p>
+            </div>
+        </div>
+    </a>
+
+        
+    <a name="4">
+        <div id="Fhr">
+            <div class="cont4">
+                <div id="Prj"><h2>PROJECT</h2></div>
+                <hr>
+            <p>
+            1. Build a cycle selling and buying application
+            </p>
+            <p>
+            2. Currently working on AI Yoga Trainer
+            </p>
+            </div>
+        </div>
+    </a>
+
+    <a name="5">
+        <div id="Fiv">
+            <div class="cont4">
+                <div id="Prj"><h2>SKILL</h2></div>
+                <hr>
+                <ul style="list-style: disc;">
+                   <li style="margin-top: 3%;"><span style="font-size: x-large; background-color: greenyellow;">C</span></li>
+                   <li style="margin-top: 3%;"><span style="font-size: x-large; background-color: greenyellow;">Java</span></li>
+                    <li style="margin-top: 3%;"><span style="font-size: x-large; background-color: greenyellow;">DBMS</span></li>
+                    <li style="margin-top: 3%;"><span style="font-size: x-large; background-color: greenyellow;">SQL</span></li>
+                    <li style="margin-top: 3%;"><span style="font-size: x-large; background-color: greenyellow;">PPT Designing</span></li>
+                </ul>
+            </div>
+        </div>
+    </a><a name="6">
+        <div id="Fiv" style="background-color: navy;">
+            <div class="cont4">
+                <div id="Prj"><h2>CONTACT</h2></div>
+                <hr>
+                <ul style="list-style: disc;">
+                   <li style="margin-top: 5%;"><span style="font-size: x-large; margin-right: 200px;">Email</span> <span style="font-size: larger; text-decoration:overline underline;">nikkugusain62@gmail.com</span></li>
+                   <li style="margin-top: 5%;"><span style="font-size: x-large; margin-right: 110px;">Phone Number</span> <span style="font-size: larger; text-decoration:overline underline;">9068959956</span></li>
+                   <li style="margin-top: 5%;"><span style="font-size: x-large; margin-right: 170px;">Linkdin</span> <span style="font-size: larger; text-decoration:overline underline;">https://www.linkedin.com/in/nikita-gusain-4b5516220</span></li>
+                   
+                </ul>
+            </div>
+        </div>
+    </a>
+
+
+    </body>
+</html>

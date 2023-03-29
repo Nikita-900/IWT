@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>stop</title>
+    </head>
+    <body>
+        <div id="ok"> </div>
+        <button onclick="x = setInterval(start,1000)">START</button>
+        <button onclick="clearInterval(x)">STOP</button>
+
+        <script>
+           block = document.getElementById("ok");
+        
+           let count=0;
+            function start(){
+                
+                block.innerHTML = count;
+                count++;
+            }
+        </script>
+    </body>
+</html>

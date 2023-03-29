@@ -1,0 +1,50 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+
+        <script>
+            function convert(){
+            let res;
+            let input = parseInt(document.getElementById("in").value);
+            let put = String(document.getElementById("H").value);
+            let out = String(document.getElementById("T").value);
+            if(put=='c'&&out=='k'){
+                res = (input+273)
+            }
+            else  if(put=='k'&&out=='c'){
+                res = (input-273)
+            }
+            else  if(put=='c'&&out=='f'){
+                res = ((input*(9/5))+32)
+            }
+            else  if(put=='f'&&out=='c'){
+                res = ((input-32)*(5/9))
+            }
+            else  if(put=='k'&&out=='f'){
+                res = (((input-273) * 9/5 )+ 32)
+            }
+            else  if(put=='f'&&out=='k'){
+                res = (((input-32) * 5/9) + 273)
+            }
+            else{
+                res = input;
+            }
+            
+           document.getElementById("ou").value=res;
+            
+        }
+            
+        </script>
+
+        <input type="text" id="in" onchange="convert()">
+        <select id="H" onchange="convert()"> <option value="c">Celcius</option><option value="k">Kelvin</option> <option value="f">Fahrenhite</option></select>
+        <input type="text"  id="ou"> 
+        <select id="T" onchange="convert()"> <option value="c">Celcius</option><option value="k">Kelvin</option> <option value="f">Fahrenhite</option></select>
+        
+            
+        <br>
+        <label style="position: relative; left: 50px;">INPUT</label> <label style="position: relative; left: 200px;">OUTPUT</label>
+    
+</html>

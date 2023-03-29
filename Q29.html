@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+            div{
+                border:2px black inset;
+                background-color: darkseagreen;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="t">Text growing</div>
+        <script>
+            fontSize=5;
+            i= setInterval(increasing,100);
+            function increasing()
+            {
+                x = document.getElementById("t");
+                fontSize++;
+                x.style.fontSize = fontSize+"pt";
+                x.style.color="red";
+                if(fontSize==50)
+                {
+                    x = "Text Shrinking";
+                    document.getElementById("t").innerHTML=x;
+                    clearInterval(i);
+                    d = setInterval(decreasing,100);
+                }
+            }
+            function decreasing()
+            {
+                x = document.getElementById("t");
+                fontSize--;
+                x.style.fontSize=fontSize+"pt";
+                x.style.color="blue";
+                if(fontSize==5)
+                {
+                    x="Text growing";
+                    document.getElementById("t").innerHTML= x;
+                    clearInterval(d);
+                    i= setInterval(increasing,100);
+                }
+            }
+            
+        </script>
+    </body>
+</html>

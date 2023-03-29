@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <title>Registration form</title>
+
+        <style>
+            body{
+                background-color: forestgreen;
+            }
+            h1{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                background-color: gold;
+                box-shadow: 3px 4px 5px black;
+
+            }
+            div{
+                padding: 15px;  
+            }
+            div>label{
+                position: relative;
+                left: 200px;
+                font-size:x-large;
+           
+            }
+            div>input{
+                position: absolute;
+                left: 600px;
+                border: 2px inset gold;
+               
+            }
+            .but{
+                margin-top: 30px;
+                position: relative;
+                left: 210px;
+                border: 2px inset gold;
+            }
+            
+        </style>
+    </head>
+
+
+    <body>
+        <script>
+
+            function check() {
+             
+                fname = document.getElementById('fname').value;
+                lname = document.getElementById('lname').value;
+                uId = document.getElementById('uid').value;
+                pass = document.getElementById('pwd').value;
+                add = document.getElementById('add').value;
+                cpass = document.getElementById('cpass').value;
+                email = document.getElementById('em').value;
+                contact =  document.getElementById('nm').value;
+                
+                let fReg = /^[a-zA-Z]+[a-zA-Z]+$/;
+                let lReg = /^[a-zA-Z]+[a-zA-Z]+$|^$/;
+                let uReg = /^[a-zA-Z]{5}[0-9]{5}$/;
+                let aReg = /^[a-zA-Z]+[a-zA-Z]+$/;
+                let eReg = /^[a-zA-Z0-9]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+                let nReg = /^[1-9]{1}[0-9]{9}$/;
+                let pReg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\W_]).{8,20}$/;
+
+
+                if(!(fReg.test(fname))){
+                    alert("Please enter a valid first name.");
+                    return false;
+                }
+                else if(!(lReg.test(lname))){
+                    alert("Please enter a valid last name .");
+                    return false;
+                }
+               else if(!(uReg.test(uId))){
+                    alert("Please enter a valid user Id .");
+                    return false;
+                }
+                else if(!(pReg.test(pass))){
+                        alert("Please enter a valid password .");
+                        return false;
+                }
+                else if(!(cpass===pass)){
+                        alert("Enter the same password .");
+                        return false;
+                }
+                else if(!(aReg.test(add))){
+                    alert("Please enter a valid address.");
+                    return false;
+                }
+                else if(!(eReg.test(email))){
+                    alert("Please enter a valid email.");
+                    return false;
+                }
+                else if(!(nReg.test(contact))){
+                    alert("Please enter a valid number.");
+                    return false;
+                }
+                else{
+                    alert("yo")
+                    return true;
+                  
+                } 
+            }           
+        </script>
+        
+        <h1>Registration Form</h1>
+        <form method="get" onsubmit=" return check()">
+        <div>
+           <label>First Name :</label>  <input type="text" name="fname" id="fname">
+        </div>
+
+        <div>
+           <label>Last Name :</label>  <input type="text" name="lname" id="lname">
+        </div>
+
+        <div>
+           <label>User Id : </label>   <input type="text" name="uid" id="uid">
+        </div>
+
+        <div>
+            <label>Password : </label>  <input type="password" name="pwd" id="pwd">
+        </div>
+
+        <div>
+            <label>Confirm Password : </label>   <input type="password" name="kiko" id="cpass">
+         </div>
+
+        <div>
+           <label> Address : </label>  <input type="text" name="add" id="add">
+         </div>
+
+         <div>
+           <label> Email : </label>   <input type="text" name="em" id="em">
+         </div>
+
+         <div>
+          <label>Contact Number :</label>     <input type="text" name="nm" id="nm">
+         </div>
+
+            <input type="submit" value="SUBMIT" style="position: relative; left:230px; top:20px">
+            <input type="reset" value="RESET" style="position: relative; left:600px; top:20px">
+         </form>
+    </body>
+</html>

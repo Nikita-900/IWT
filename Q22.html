@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style>
+            .container{
+                display: flex;
+            }
+            .inner{
+                background-color: black;
+                height: 100px;
+                width: 100px;
+                border: 2px wheat inset;
+                color: antiquewhite;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .inner1{
+                background-color: red;
+                height: 100px;
+                width: 100px;
+                border: 2px black inset;
+                color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+
+    </head>
+    <body>
+        
+        <script>
+            rows=prompt("enter the number of rows")
+            column = prompt("enter the number of columns")
+            for(i=1;i<=column;i++){ 
+                document.write("<div class=container>")
+            for(j=1;j<=column;j++){
+                if((i+j)%2==0){
+                    document.write("<div class=inner>"+(i+j)+" </div>")
+                }
+                else{
+                    document.write("<div class=inner1>"+(i+j)+"</div>")
+                } 
+            }
+            
+            document.write("</div>")
+            }
+        </script>
+    </body>
+</html>
